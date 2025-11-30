@@ -1,61 +1,61 @@
 body {
-    background-color: #080808; /* Deeper black for profound melancholy */
-    color: #d0d0d0; /* Softer gray text for wistful readability */
+    background-color: #050505; /* Profound black for intense melancholy */
+    color: #c0c0c0; /* Muted gray for wistful introspection */
     font-family: 'Roboto', sans-serif;
-    font-weight: 300; /* Lighter weight for ethereal feel */
+    font-weight: 300;
+    font-style: italic; /* Italic for poetic, lingering wistfulness */
     margin: 0;
     padding: 0;
-    line-height: 1.8; /* More space for reflective pacing */
-    letter-spacing: 0.5px; /* Subtle wistfulness in text flow */
+    line-height: 2.0; /* Expansive spacing for reflective pause */
+    letter-spacing: 1px;
 }
 
 header {
-    background: #000;
+    background: linear-gradient(to bottom, #000, #050505);
     text-align: center;
-    padding: 30px; /* More space for solitude */
+    padding: 40px;
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
-    color: #800020; /* Deep crimson for melancholic depth */
+    color: #600018; /* Darker crimson for deeper melancholy */
     margin: 0;
-    font-size: 2.8em;
-    text-shadow: 0 0 5px rgba(212, 175, 55, 0.2); /* Subtle golden glow for hidden joy */
+    font-size: 3em;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.3); /* Stronger golden glow for emerging hope */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 15px 0 0;
+    margin: 20px 0 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 25px;
 }
 
 nav a {
-    color: #d0d0d0;
+    color: #c0c0c0;
     text-decoration: none;
-    transition: color 0.5s ease; /* Slower for contemplative hover */
+    transition: color 0.6s ease;
 }
 
 nav a:hover {
-    color: #d4af37; /* Golden joy on interaction */
+    color: #d4af37; /* Gold for hopeful spark */
 }
 
 .hero {
-    background: linear-gradient(to bottom, rgba(8,8,8,0.8), rgba(128,0,32,0.3)), url('images/hero-bg.jpg'); /* Misty gradient over image for veiled melancholy */
+    background: linear-gradient(to bottom, rgba(5,5,5,0.9), rgba(96,0,24,0.4)), url('images/hero-misty-forest.jpg'); /* Symbolic misty forest */
     background-size: cover;
     background-position: center;
-    height: 60vh; /* Taller for immersive wistfulness */
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
-    overflow: hidden;
-    animation: fadeIn 3s ease-in; /* Slower fade for emotional build */
+    animation: fadeIn 4s ease-in;
 }
 
 .hero::before {
@@ -65,75 +65,94 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4); /* Dark overlay for deeper melancholy */
-    filter: blur(2px); /* Soft blur for wistful haze */
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    background: rgba(0,0,0,0.5);
+    filter: blur(3px); /* Enhanced blur for wistful haze */
 }
 
 .hero-content {
-    max-width: 900px;
-    padding: 30px;
+    max-width: 1000px;
+    padding: 40px;
     z-index: 1;
 }
 
 h2 {
     font-family: 'Playfair Display', serif;
-    color: #800020;
-    font-size: 2.2em;
+    font-style: italic;
+    color: #600018;
+    font-size: 2.5em;
 }
 
 .btn {
-    background: #800020;
-    color: #d0d0d0;
-    padding: 12px 25px;
+    background: #600018;
+    color: #c0c0c0;
+    padding: 15px 30px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 8px;
+    transition: background 0.6s ease, box-shadow 0.6s ease;
 }
 
 .btn:hover {
-    background: #d4af37; /* Shift to gold for joyful uplift */
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); /* Warm glow for hope */
+    background: #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
 }
 
 section {
-    padding: 50px 25px; /* More padding for reflective space */
+    padding: 60px 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.symbolic-image {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); /* Hopeful glow around symbol */
+    filter: brightness(0.8); /* Muted for melancholy */
+}
+
 #content .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
 .content-item {
-    background: #101010; /* Darker card for isolation */
-    padding: 25px;
-    border-radius: 8px;
-    animation: pulse 4s infinite ease-in-out; /* Gentle pulse for melancholic rhythm with joyful subtlety */
-    opacity: 0.9; /* Slight transparency for wistful veil */
+    background: #0a0a0a;
+    padding: 30px;
+    border-radius: 10px;
+    animation: pulse 5s infinite ease-in-out;
+    opacity: 0.85;
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 0.9; }
-    50% { opacity: 1; } /* Brief full opacity for moments of joy */
+    0%, 100% { opacity: 0.85; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.02); } /* Hopeful expansion */
+}
+
+.symbol {
+    display: block;
+    margin: 0 auto 10px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.2)); }
+    to { filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5)); }
 }
 
 footer {
     background: #000;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     font-size: 0.9em;
 }
 
 footer a {
-    color: #800020;
+    color: #600018;
     text-decoration: none;
 }
 
@@ -142,7 +161,7 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-    h1 { font-size: 2.2em; }
-    h2 { font-size: 1.8em; }
-    .hero { height: 50vh; }
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+    .hero { height: 60vh; }
 }
