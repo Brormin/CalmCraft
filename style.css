@@ -1,167 +1,128 @@
 body {
-    background-color: #050505; /* Profound black for intense melancholy */
-    color: #c0c0c0; /* Muted gray for wistful introspection */
+    background-color: #f9fbfc; /* Soft neutral for calming mindfulness */
+    color: #333;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-style: italic; /* Italic for poetic, lingering wistfulness */
     margin: 0;
     padding: 0;
-    line-height: 2.0; /* Expansive spacing for reflective pause */
-    letter-spacing: 1px;
+    line-height: 1.7;
 }
 
 header {
-    background: linear-gradient(to bottom, #000, #050505);
+    background: #ffffff;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    color: #600018; /* Darker crimson for deeper melancholy */
+    font-family: 'Lora', serif;
+    color: #4a90e2; /* Soft blue for tranquility */
     margin: 0;
-    font-size: 3em;
-    text-shadow: 0 0 8px rgba(212, 175, 55, 0.3); /* Stronger golden glow for emerging hope */
+    font-size: 2.5em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 20px 0 0;
+    margin: 10px 0 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 25px;
+    margin: 0 15px;
 }
 
 nav a {
-    color: #c0c0c0;
+    color: #333;
     text-decoration: none;
-    transition: color 0.6s ease;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #d4af37; /* Gold for hopeful spark */
+    color: #4a90e2;
 }
 
 .hero {
-    background: linear-gradient(to bottom, rgba(5,5,5,0.9), rgba(96,0,24,0.4)), url('images/hero-misty-forest.jpg'); /* Symbolic misty forest */
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(154,193,169,0.3)), url('images/hero-bg.jpg'); /* Soft green overlay */
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    height: 40vh; /* Reduced for better layout */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
-    animation: fadeIn 4s ease-in;
+    animation: fadeIn 2s ease-in;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    filter: blur(3px); /* Enhanced blur for wistful haze */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .hero-content {
-    max-width: 1000px;
-    padding: 40px;
-    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
 }
 
 h2 {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    color: #600018;
-    font-size: 2.5em;
+    font-family: 'Lora', serif;
+    color: #4a90e2;
+    font-size: 2em;
 }
 
 .btn {
-    background: #600018;
-    color: #c0c0c0;
-    padding: 15px 30px;
+    background: #98c1a9; /* Soft green for growth and change */
+    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.6s ease, box-shadow 0.6s ease;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 .btn:hover {
-    background: #d4af37;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    background: #7ba98d;
 }
 
 section {
-    padding: 60px 30px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.symbolic-image {
-    display: block;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); /* Hopeful glow around symbol */
-    filter: brightness(0.8); /* Muted for melancholy */
-}
-
-#content .content-grid {
+#content .content-grid, #videos .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.content-item {
-    background: #0a0a0a;
-    padding: 30px;
-    border-radius: 10px;
-    animation: pulse 5s infinite ease-in-out;
-    opacity: 0.85;
+.content-item, .video-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-@keyframes pulse {
-    0%, 100% { opacity: 0.85; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.02); } /* Hopeful expansion */
-}
-
-.symbol {
-    display: block;
-    margin: 0 auto 10px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    animation: glow 3s infinite alternate;
-}
-
-@keyframes glow {
-    from { filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.2)); }
-    to { filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5)); }
+.content-item:hover, .video-item:hover {
+    transform: translateY(-5px);
 }
 
 footer {
-    background: #000;
+    background: #ffffff;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     font-size: 0.9em;
+    border-top: 1px solid #eee;
 }
 
 footer a {
-    color: #600018;
+    color: #4a90e2;
     text-decoration: none;
 }
 
-footer a:hover {
-    color: #d4af37;
-}
-
 @media (max-width: 768px) {
-    h1 { font-size: 2.5em; }
-    h2 { font-size: 2em; }
-    .hero { height: 60vh; }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    .hero { height: 30vh; }
 }
